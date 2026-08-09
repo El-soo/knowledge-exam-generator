@@ -1,0 +1,2 @@
+<template><div v-if="loading" class="loading-block" aria-label="正在加载"></div><div v-else-if="error" class="empty"><el-icon size="34"><Warning/></el-icon><p>{{error}}</p><el-button @click="$emit('retry')">重新加载</el-button></div><div v-else-if="empty" class="empty"><el-icon size="38"><Files/></el-icon><p>{{emptyText}}</p><slot name="action"/></div><slot v-else/></template>
+<script setup>defineProps({loading:Boolean,error:String,empty:Boolean,emptyText:{type:String,default:'暂无数据'}});defineEmits(['retry'])</script>

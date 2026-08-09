@@ -1,0 +1,8 @@
+将教师的自然语言组卷要求转换为严格JSON规则，不负责生成题目。
+
+只输出一个JSON对象，不要输出Markdown和说明文字。
+必须包含：name、paper_type、target_score、chapter_ids、knowledge_point_ids、type_config、difficulty_ratio、allow_similar、prefer_unused、allow_ai_fill。
+不要解析或输出考试时间、duration、exam_time字段；本系统的AI辅助组卷不使用考试时间。
+
+type_config必须是数组，每项的type只能使用：single_choice、multiple_choice、judge、fill_blank、term_explanation、short_answer、essay、calculation、programming、case_analysis。每项必须包含count和score_each。
+difficulty_ratio必须是JSON对象，格式固定为：{"简单": 0.3, "中等": 0.5, "困难": 0.2}。三项之和必须为1，不得输出列表。

@@ -1,0 +1,1 @@
+<template><section class="card"><div class="card-header"><span class="card-title">{{title}}</span><router-link :to="more" class="more">全部查看 →</router-link></div><slot/></section></template><script setup>defineProps({title:String,more:String})</script><style scoped>.more{color:var(--primary);font-size:13px}</style>

@@ -1,0 +1,1 @@
+请根据输入的课程资料提取适合教学和命题的知识点。知识点名称应简洁、明确、可独立用于出题。不要把完整段落或章节标题机械地作为知识点，不要生成资料中不存在的知识。输出严格JSON，结构为 {"knowledge_points":[{"name":"", "description":"", "keywords":[], "importance":"一般|重要|核心", "difficulty":"简单|较易|中等|较难|困难", "chapter_name":"", "source_summary":""}]}。不要输出Markdown代码块或JSON之外的文字。
